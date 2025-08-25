@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataPilot SMB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">DataPilot SMB</div>
+    <div class="user-info">
+      <span>Привет, Иван!</span>
+      <div class="notifications" title="Уведомления">🔔</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Центральный баннер -->
+    <section class="banner">
+      <h1 id="banner-title">Ваш ИИ-ассистент готов! 3 новых рекомендации для роста прибыли</h1>
+    </section>
+
+    <!-- Приоритетные рекомендации -->
+    <section class="recommendations">
+      <article class="card" data-id="1">
+        <div class="icon">💰</div>
+        <h3>Увеличьте цену на Товар на 10%</h3>
+        <p>Спрос вырос на 25%, конкуренты дороже на 15%</p>
+        <span class="effect green">+$500 прибыли/мес</span>
+        <div class="actions">
+          <button class="btn-accept">Принять</button>
+          <button class="btn-details">Детали</button>
+          <button class="btn-decline">Отклонить</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="2">
+        <div class="icon">📉</div>
+        <h3>Сократите закупку Товар A на 15%</h3>
+        <p>Избыточные запасы, снижение спроса на 10%</p>
+        <span class="effect orange">-200$ затрат/мес</span>
+        <div class="actions">
+          <button class="btn-accept">Принять</button>
+          <button class="btn-details">Детали</button>
+          <button class="btn-decline">Отклонить</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="3">
+        <div class="icon">📦</div>
+        <h3>Перенесите бюджет из Канала A в Канал B на $300</h3>
+        <p>Более высокая конверсия в Канале B</p>
+        <span class="effect green">+150$ прибыли/мес</span>
+        <div class="actions">
+          <button class="btn-accept">Принять</button>
+          <button class="btn-details">Детали</button>
+          <button class="btn-decline">Отклонить</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Метрики -->
+    <section class="metrics">
+      <h2>Ваши цифры сегодня</h2>
+      <div class="metrics-grid">
+        <div class="metric">
+          <h3 id="revenueMetric">Выручка: $5000</h3>
+          <canvas id="revenueChart"></canvas>
+        </div>
+        <div class="metric">
+          <h3 id="avgCheckMetric">Средний чек: $75</h3>
+          <canvas id="avgCheckChart"></canvas>
+        </div>
+        <div class="metric">
+          <h3 id="cacMetric">CAC: $50</h3>
+          <canvas id="cacChart"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">О продукте</a></li>
+        <li><a href="#">Поддержка</a></li>
+        <li><a href="#">Документация</a></li>
+        <li><a href="#">Конфиденциальность</a></li>
+      </ul>
+    </nav>
+    <p>© 2025 DataPilot. Все права защищены.</p>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 id="modal-title">Заголовок</h2>
+      <p id="modal-text">Здесь появится описание</p>
+    </div>
+  </div>
+
+  <!-- Toast уведомления -->
+  <div id="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
